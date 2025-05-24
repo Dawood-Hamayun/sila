@@ -290,7 +290,7 @@ const Hero = () => {
 };
 
 // Helper function to get SVG icons for stats
-const getStatIcon = (iconType: string) => {
+const getStatIcon = (iconType) => {
   switch (iconType) {
     case 'graduates':
       return (
