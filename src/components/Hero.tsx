@@ -45,15 +45,15 @@ const Hero = () => {
   // Standard animation variants for consistency
   const fadeInUpVariant = {
     hidden: { opacity: 0, y: 20 },
-    visible: (custom) => ({ 
-      opacity: 1, 
-      y: 0, 
-      transition: { 
-        duration: 0.5, 
+    visible: (custom: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
         delay: custom * 0.1,
-        ease: [0.4, 0, 0.2, 1]
-      } 
-    })
+        ease: [0.4, 0, 0.2, 1],
+      },
+    }),
   };
 
   const scaleInVariant = {
