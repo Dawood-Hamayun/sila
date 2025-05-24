@@ -45,7 +45,7 @@ const Hero = () => {
   // Standard animation variants for consistency
   const fadeInUpVariant = {
     hidden: { opacity: 0, y: 20 },
-    visible: (custom: number) => ({
+    visible: (custom) => ({
       opacity: 1,
       y: 0,
       transition: {
