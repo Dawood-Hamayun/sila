@@ -1,0 +1,345 @@
+/* SuccessStories.module.css - Simplified for debugging */
+.successSection {
+    position: relative;
+    padding: 5rem 0;
+    background-color: #fff;
+    color: #1F2937;
+    font-family: var(--font-quicksand);
+  }
+  
+  /* Main container */
+  .container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+  }
+  
+  /* Section Header */
+  .sectionHeader {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+  }
+  
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1.25rem;
+    background-color: rgba(52, 176, 233, 0.1);
+    color: #34B0E9;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: 30px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .sectionTitle {
+    font-family: var(--font-outfit);
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #111827;
+    margin: 0 0 1.5rem;
+  }
+  
+  .highlight {
+    position: relative;
+    color: #34B0E9;
+    display: inline-block;
+    z-index: 1;
+  }
+  
+  .highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0.1em;
+    width: 100%;
+    height: 0.3em;
+    background-color: #FFC93D;
+    opacity: 0.4;
+    z-index: -1;
+    border-radius: 4px;
+  }
+  
+  .sectionDescription {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #4B5563;
+    margin: 0 auto;
+    max-width: 700px;
+  }
+  
+  /* Stories container and grid */
+  .storiesWrapper {
+    position: relative;
+    margin-bottom: 3rem;
+  }
+  
+  .storiesGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .storiesGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .storiesGrid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+  }
+  
+  /* Mobile navigation dots */
+  .mobileNav {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .mobileNav {
+      display: none;
+    }
+  }
+  
+  .mobileNavDot {
+    width: 8px;
+    height: 8px;
+    background-color: #E5E7EB;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+  }
+  
+  .mobileNavDot.activeNavDot {
+    width: 24px;
+    border-radius: 12px;
+    background-color: #34B0E9;
+  }
+  
+  /* Simplified story card */
+  .storyCard {
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  /* For mobile carousel */
+  @media (max-width: 767px) {
+    .storyCard {
+      display: none;
+    }
+    
+    .storyCard.activeMobile {
+      display: block;
+    }
+  }
+  
+  .cardInner {
+    height: 100%;
+  }
+  
+  .simpleFront {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  /* Image container styling - key part for debugging */
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    padding-top: 120%; /* Aspect ratio */
+    overflow: hidden;
+  }
+  
+  /* Direct styling for the image */
+  .studentImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Grade badge */
+  .gradeBadge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: linear-gradient(90deg, #34B0E9 0%, #0C8CCB 100%);
+    color: white;
+    padding: 0.5rem 0.875rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 15px rgba(52, 176, 233, 0.3);
+    z-index: 2;
+  }
+  
+  /* Card content styling */
+  .cardContent {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .studentName {
+    font-family: var(--font-outfit);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+  }
+  
+  .studentSkill {
+    font-size: 0.875rem;
+    color: #34B0E9;
+    margin: 0;
+    font-weight: 500;
+  }
+  
+  .studentQuote {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #4B5563;
+    margin: 0;
+    font-style: italic;
+    flex-grow: 1;
+  }
+  
+  .achievementTag {
+    display: inline-flex;
+    padding: 0.5rem 0.75rem;
+    background-color: rgba(52, 176, 233, 0.08);
+    border-radius: 8px;
+    margin-top: 0.5rem;
+  }
+  
+  .achievementTag span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #374151;
+  }
+  
+  /* CTA Section */
+  .ctaContainer {
+    margin-top: 3rem;
+  }
+  
+  .ctaCard {
+    background: linear-gradient(135deg, #34B0E9 0%, #0C8CCB 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    .ctaCard {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      padding: 3rem;
+    }
+  }
+  
+  .ctaContent {
+    max-width: 750px;
+  }
+  
+  .ctaHeading {
+    font-family: var(--font-outfit);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+  }
+  
+  .ctaText {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.9;
+  }
+  
+  .ctaButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #0C8CCB;
+    font-family: var(--font-outfit);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1023px) {
+    .sectionHeader {
+      margin-bottom: 2.5rem;
+    }
+    
+    .sectionTitle {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .successSection {
+      padding: 4rem 0;
+    }
+    
+    .sectionHeader {
+      margin-bottom: 2rem;
+    }
+    
+    .sectionTitle {
+      font-size: 1.75rem;
+    }
+    
+    .sectionDescription {
+      font-size: 1rem;
+    }
+    
+    .ctaCard {
+      padding: 1.5rem;
+    }
+    
+    .ctaHeading {
+      font-size: 1.25rem;
+    }
+    
+    .ctaButton {
+      width: 100%;
+    }
+  }

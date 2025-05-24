@@ -1,0 +1,678 @@
+/* Mission.module.css */
+.missionSection {
+    position: relative;
+    padding: 6rem 0 8rem;
+    background-color: var(--neutral-50);
+    overflow: hidden;
+    color: var(--neutral-800);
+    font-family: var(--font-secondary);
+  }
+  
+  /* Background Elements */
+  .backgroundElements {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .bgShape1 {
+    position: absolute;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 45% 55% 60% 40% / 45% 60% 40% 55%;
+    background-color: rgba(62, 183, 237, 0.06);
+    top: -5%;
+    right: -5%;
+    opacity: 0.8;
+  }
+  
+  .bgShape2 {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
+    background-color: rgba(62, 183, 237, 0.08);
+    bottom: -5%;
+    left: -5%;
+    opacity: 0.8;
+  }
+  
+  .dotPattern {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(62, 183, 237, 0.07) 1px, transparent 1px);
+    background-size: 25px 25px;
+    opacity: 0.4;
+    z-index: 0;
+  }
+  
+  /* Main container */
+  .container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+  }
+  
+  /* Mission Header */
+  .missionHeader {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+  }
+  
+  .badge {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background-color: var(--primary-light);
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: 30px;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .missionTitle {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--neutral-900);
+    margin: 0;
+  }
+  
+  .highlight {
+    position: relative;
+    color: var(--primary);
+    display: inline-block;
+    z-index: 1;
+  }
+  
+  .highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0.1em;
+    width: 100%;
+    height: 0.3em;
+    background-color: var(--accent-light);
+    z-index: -1;
+    border-radius: 4px;
+  }
+  
+  /* Mission Grid Layout - Image Left, Content Right */
+  .missionGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+    width: 100%;
+  }
+  
+  @media (min-width: 1024px) {
+    .missionGrid {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+  }
+  
+  /* Image Column - Left */
+  .imageColumn {
+    order: 1;
+  }
+  
+  .imageWrapper {
+    position: relative;
+    width: 100%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background-color: white;
+    box-shadow: var(--shadow-xl);
+    margin: 0 auto;
+  }
+  
+  .missionImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  
+  .partnerOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.25rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .partnerLogo {
+    background-color: white;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+  }
+  
+  @media (min-width: 1024px) {
+    .imageColumn {
+      order: 1; /* Keep left on desktop */
+    }
+  }
+  
+  /* Text Column - Right */
+  .textColumn {
+    order: 2;
+    max-width: 600px;
+  }
+  
+  .missionText {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--neutral-600);
+    margin: 0 0 2.5rem;
+  }
+  
+  @media (min-width: 1024px) {
+    .textColumn {
+      order: 2; /* Keep right on desktop */
+    }
+  }
+  
+  /* Principles List */
+  .principlesList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .principleItem {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    transition: transform var(--transition-base);
+  }
+  
+  .principleItem:hover {
+    transform: translateX(5px);
+  }
+  
+  .principleIcon {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-light);
+    border-radius: 0.75rem;
+    color: var(--primary);
+    padding: 0.5rem;
+    transition: all var(--transition-base);
+  }
+  
+  .principleItem:hover .principleIcon {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .principleIcon svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .principleContent {
+    flex: 1;
+  }
+  
+  .principleContent h4 {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--neutral-900);
+    margin: 0 0 0.25rem;
+  }
+  
+  .principleContent p {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--neutral-600);
+    margin: 0;
+  }
+  
+  /* CTA Button */
+  .missionCta {
+    display: flex;
+  }
+  
+  .ctaButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--primary);
+    color: white;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: var(--radius-md);
+    box-shadow: 0 10px 15px -3px var(--primary-shadow);
+    transition: all var(--transition-base);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: auto;
+  }
+  
+  @media (max-width: 767px) {
+    .ctaButton {
+      width: 100%;
+    }
+  }
+  
+  .ctaButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: left 0.7s ease;
+  }
+  
+  .ctaButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 20px -5px var(--primary-shadow);
+    background-color: var(--primary-dark);
+  }
+  
+  .ctaButton:hover::before {
+    left: 100%;
+  }
+  
+  .ctaIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform var(--transition-base);
+  }
+  
+  .ctaButton:hover .ctaIcon {
+    transform: translateX(3px);
+  }
+  
+  /* Founder Section - Now a prominent standalone card */
+  .founderSection {
+    margin-top: 1rem;
+  }
+  
+  .founderCard {
+    display: flex;
+    align-items: flex-start;
+    padding: 2.5rem;
+    background-color: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .founderImageContainer {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    margin-right: 2rem;
+    margin-top: 0.5rem;
+    position: relative;
+  }
+  
+  .founderImage {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .founderContent {
+    flex: 1;
+    position: relative;
+  }
+  
+  .quoteMarks .openQuote,
+  .quoteMarks .closeQuote {
+    position: absolute;
+    font-family: Georgia, serif;
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--primary-light);
+    opacity: 0.7;
+  }
+  
+  .quoteMarks .openQuote {
+    left: -2rem;
+    top: -1.5rem;
+  }
+  
+  .quoteMarks .closeQuote {
+    right: -1rem;
+    bottom: 4rem;
+  }
+  
+  .founderQuote {
+    font-size: 1.125rem;
+    font-style: italic;
+    color: var(--neutral-800);
+    line-height: 1.8;
+    margin: 0 0 1.5rem;
+    position: relative;
+  }
+  
+  .founderInfo {
+    border-top: 1px solid var(--neutral-200);
+    padding-top: 1rem;
+  }
+  
+  .founderName {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--neutral-900);
+    margin: 0 0 0.25rem;
+  }
+  
+  .founderTitle {
+    font-size: 0.875rem;
+    color: var(--primary);
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+  
+  /* Bottom Wave */
+  .bottomWave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 0;
+  }
+  
+  .bottomWave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 4rem;
+    fill: white;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1023px) {
+    .missionSection {
+      padding: 4rem 0 6rem;
+    }
+    
+    .missionHeader {
+      margin-bottom: 3rem;
+    }
+    
+    .founderCard {
+      padding: 1.5rem;
+    }
+    
+    .founderQuote {
+      font-size: 1rem;
+    }
+    
+    .quoteMarks .openQuote,
+    .quoteMarks .closeQuote {
+      font-size: 3rem;
+    }
+    
+    .quoteMarks .openQuote {
+      left: -1.5rem;
+      top: -1rem;
+    }
+    
+    .quoteMarks .closeQuote {
+      right: -0.5rem;
+      bottom: 3rem;
+    }
+    
+    .founderImageContainer {
+      margin-right: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .missionSection {
+      padding: 4rem 0 5rem;
+    }
+    
+    .container {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+    
+    .missionHeader {
+      width: 100%;
+      margin-bottom: 2.5rem;
+      padding: 0;
+    }
+    
+    .missionGrid {
+      gap: 2.5rem;
+    }
+    
+    .imageColumn {
+      width: 100%;
+      padding: 0;
+    }
+    
+    .textColumn {
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+    }
+    
+    .imageWrapper {
+      max-width: 100%;
+      margin: 0;
+      border-radius: var(--radius-md);
+    }
+    
+    .founderCard {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      margin: 0 auto;
+      width: 100%;
+    }
+    
+    .founderImageContainer {
+      margin-bottom: 1.5rem;
+      margin-top: 0;
+      margin-right: 0;
+    }
+    
+    .founderContent {
+      width: 100%;
+    }
+    
+    .quoteMarks .openQuote {
+      left: -1rem;
+      top: -0.5rem;
+    }
+    
+    .quoteMarks .closeQuote {
+      right: 0;
+      bottom: 3rem;
+    }
+    
+    .missionTitle {
+      font-size: 1.75rem;
+    }
+    
+    .principlesList {
+      width: 100%;
+    }
+    
+    .principleItem {
+      gap: 0.75rem;
+      width: 100%;
+    }
+    
+    .principleIcon {
+      width: 2rem;
+      height: 2rem;
+      min-width: 2rem; /* Ensure it doesn't shrink */
+    }
+    
+    .principleContent {
+      width: 100%;
+    }
+    
+    .principleContent h4 {
+      font-size: 1rem;
+    }
+    
+    .principleContent p {
+      font-size: 0.875rem;
+    }
+    
+    .missionCta {
+      width: 100%;
+    }
+    
+    .ctaButton {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .founderSection {
+      width: 100%;
+    }
+  }
+  
+  /* Small screens */
+  @media (max-width: 480px) {
+    .missionSection {
+      padding: 3.5rem 0 5rem;
+    }
+    
+    .badge {
+      font-size: 0.75rem;
+      padding: 0.4rem 1rem;
+    }
+    
+    .missionTitle {
+      font-size: 1.5rem;
+    }
+    
+    .missionText {
+      font-size: 1rem;
+    }
+    
+    .founderCard {
+      padding: 1.25rem;
+    }
+    
+    .founderQuote {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    
+    .founderName {
+      font-size: 1.125rem;
+    }
+    
+    .founderTitle {
+      font-size: 0.75rem;
+    }
+    
+    .missionCta {
+      margin-top: 1.5rem;
+    }
+    
+    .quoteMarks .openQuote {
+      left: -0.75rem;
+      top: -0.5rem;
+      font-size: 3rem;
+    }
+    
+    .quoteMarks .closeQuote {
+      right: 0;
+      bottom: 2.5rem;
+      font-size: 3rem;
+    }
+  }
+  
+  /* Very small screens */
+  @media (max-width: 375px) {
+    .missionSection {
+      padding: 3rem 0 5rem;
+    }
+    
+    .founderCard {
+      padding: 1rem;
+    }
+    
+    .founderQuote {
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+    
+    .founderName {
+      font-size: 1.125rem;
+    }
+    
+    .founderTitle {
+      font-size: 0.75rem;
+    }
+    
+    .founderImageContainer {
+      width: 50px;
+      height: 50px;
+    }
+    
+    .founderImage {
+      width: 50px;
+      height: 50px;
+    }
+    
+    .quoteMarks .openQuote {
+      left: -0.5rem;
+      font-size: 2.5rem;
+    }
+    
+    .quoteMarks .closeQuote {
+      font-size: 2.5rem;
+      right: 0;
+      bottom: 2rem;
+    }
+  }
