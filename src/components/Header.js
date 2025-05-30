@@ -14,28 +14,26 @@ const Header = () => {
   
   // Navigation items
   const navItems = [
-    { name: 'Home', href: '/' },
+    { name: 'Home', href: '#hero' },
     { 
       name: 'About', 
-      href: '/about',
+      href: '#mission',
       dropdown: [
-        { name: 'Our Story', href: '/about#story' },
-        { name: 'Mission & Vision', href: '/about#mission' },
-        { name: 'Our Team', href: '/about#team' },
+        { name: 'Our Mission', href: '#mission' },
+        { name: 'Our Story', href: '#do-something-good' },
+        { name: 'Special Thanks', href: '#special-thanks' },
       ]
     },
     { 
-      name: 'Programs', 
-      href: '/programs',
+      name: 'Stories', 
+      href: '#success-stories',
       dropdown: [
-        { name: 'Primary Education', href: '/programs#primary' },
-        { name: 'After-School', href: '/programs#after-school' },
-        { name: 'Teacher Training', href: '/programs#training' },
+        { name: 'Success Stories', href: '#success-stories' },
+        { name: 'Our Journey', href: '#do-something-good' },
       ]
     },
-    { name: 'Get Involved', href: '/get-involved' },
-    { name: 'Gallery', href: '/gallery' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Mission', href: '#mission' },
+    { name: 'Contact', href: '#special-thanks' },
   ];
 
   // Handle scroll for header appearance change
@@ -231,11 +229,16 @@ const Header = () => {
 
         {/* CTA Button */}
         <Link 
-          href="/donate" 
+          href="https://www.facebook.com/silaschool" 
+          target="_blank"
+          rel="noopener noreferrer"
           className={styles.ctaButton}
-          aria-label="Support SILA School with a donation"
+          aria-label="See our journey on Facebook"
         >
-          Support Us
+          <svg className={styles.facebookIcon} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg>
+          See Our Journey
         </Link>
 
         {/* Mobile Menu Button */}
@@ -340,12 +343,17 @@ const Header = () => {
                 </ul>
                 <div className={styles.mobileNavFooter}>
                   <Link 
-                    href="/donate" 
+                    href="https://facebook.com" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={styles.mobileCta}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    aria-label="Support SILA School with a donation"
+                    aria-label="See our journey on Facebook"
                   >
-                    Support Us
+                    <svg className={styles.facebookIcon} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    </svg>
+                    See Our Journey
                   </Link>
                   <div className={styles.mobileSocial}>
                     <a 

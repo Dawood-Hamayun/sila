@@ -6,6 +6,9 @@ import Hero from '../components/Hero';
 import Mission from '../components/Mission';
 import OurStory from '../components/OurStory';
 import SuccessStories from '../components/SuccessStories';
+import DoSomethingGood from '../components/DoSomethingGood';
+import SpecialThanks from '../components/SpecialThanks';
+import Footer from '../components/Footer'
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
       <Hero />
       <Mission />
       <SuccessStories />
+      <DoSomethingGood />
+      <SpecialThanks />
+      <Footer />
       {/* <OurStory /> */}
       {/* Other sections or components */}
     </div>

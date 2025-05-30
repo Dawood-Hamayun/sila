@@ -244,9 +244,10 @@ const Mission = () => {
                 <span className={styles.closeQuote}>"</span>
               </div>
               <blockquote className={styles.founderQuote}>
-                Education is the most powerful tool we can use to change the world. At SILA School, we're committed to ensuring every child has access to quality education regardless of their circumstances. When we invest in a child's education, we're investing in the future of our entire community.
+              Pakistan has 25 million out of school children. All these children have individual talents and qualities that deserve to be polished and presented to the world.
+              SILA is just a project doing bare minimum. However, I strongly believe that if we all put in a small effort like this, we can create a meaningful change together
               </blockquote>
-              
+  
               <div className={styles.founderInfo}>
                 <h3 className={styles.founderName}>Jibran Khalil</h3>
                 <p className={styles.founderTitle}>FOUNDER & EXECUTIVE DIRECTOR</p>

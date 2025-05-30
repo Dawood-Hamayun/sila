@@ -150,14 +150,14 @@ const SuccessStories = () => {
         <div className={styles.ctaContainer}>
           <div className={styles.ctaCard}>
             <div className={styles.ctaContent}>
-              <h3 className={styles.ctaHeading}>Help more students continue their education</h3>
+              <h3 className={styles.ctaHeading}>Look at the complete jounrey of the SILA School.</h3>
               <p className={styles.ctaText}>
-                Your support can help us expand our scholarship program and enable more students to pursue their dreams through continued education.
+              Visit our facebook page and follow our complete journey from a small community project to an established school, over the last decade.
               </p>
             </div>
             
-            <Link href="/donate" className={styles.ctaButton}>
-              <span>Support Their Journey</span>
+            <Link href="https://www.facebook.com/silaschool" className={styles.ctaButton}>
+              <span>Follow our Journey</span>
             </Link>
           </div>
         </div>

@@ -36,10 +36,10 @@ const Hero = () => {
 
   // Education impact stats
   const impactStats = [
-    { number: 780, label: "Students educated", icon: "graduates" },
-    { number: 14, label: "Years of service", icon: "calendar" },
-    { number: 92, label: "% continuing education", icon: "growth" },
-    { number: 28, label: "Community teachers", icon: "teacher" }
+    { number: 500, label: "Students educated", icon: "graduates" },
+    { number: 11, label: "Years of service", icon: "calendar" },
+    { number: 92, label: "% retention rate", icon: "growth" },
+    { number: 150, label: "Community volunteers", icon: "teacher" }
   ];
 
   // Standard animation variants for consistency
@@ -185,8 +185,11 @@ const Hero = () => {
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
               </Link>
-              <Link href="#impact" className={styles.secondaryButton}>
-                <span>See Our Impact</span>
+              <Link href="https://www.facebook.com/silaschool" target="_blank" rel="noopener noreferrer" className={styles.secondaryButton}>
+                <svg className={styles.facebookIcon} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+                <span>See Our Journey</span>
               </Link>
             </motion.div>
           </div>
