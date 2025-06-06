@@ -18,17 +18,17 @@ const Hero = () => {
   // Image gallery data showing real SILA School environments
   const galleryImages = [
     {
-      src: "/images/hero-1.jpg",
+      src: "/images/hero-1.jpeg",
       alt: "SILA School students lined up in their uniforms",
       caption: "Our students ready for a new day of learning"
     },
     {
-      src: "/images/hero-2.jpg",
+      src: "/images/hero-2.jpeg",
       alt: "SILA School students studying outdoors",
       caption: "Creating learning spaces in all environments"
     },
     {
-      src: "/images/hero-3.jpg",
+      src: "/images/hero-3.jpeg",
       alt: "SILA School students in a colorful classroom",
       caption: "Inspiring creativity through engaging spaces"
     }
