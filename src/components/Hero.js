@@ -148,7 +148,7 @@ const Hero = () => {
               className={styles.impactTag}
             >
               <span className={styles.dot} aria-hidden="true"></span>
-              Empowering through education since 2010
+              Empowering through education since 2015
             </motion.div>
             
             <motion.h1 
