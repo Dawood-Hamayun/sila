@@ -175,7 +175,7 @@ const DoSomethingGood = () => {
               <h3 className={styles.storyTitle}>Do Something Good Every Sunday</h3>
               
               <p className={styles.storyText}>
-                In 2014, I started an activity with my daughter and called it "Do Something Good Every Sunday". 
+                In 2014, being inspired by the great Imran Khan, I started an activity with my daughter and called it "Do Something Good Every Sunday". 
                 We started by distributing small gifts in the nearby marginalized communities. There was a very 
                 quick realization that a few candies and toys will not fix the problems of these beautiful children.
               </p>
