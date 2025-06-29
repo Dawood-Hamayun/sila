@@ -15,7 +15,7 @@ const SpecialThanks = () => {
       image: "/images/wali.jpeg"
     },
     {
-      name: "Balal Naeem",
+      name: "Balal & Saba",
       image: "/images/bilal.jpeg"
     },
     {
