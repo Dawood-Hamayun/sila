@@ -285,3 +285,7 @@
       font-size: 1rem;
     }
   }
+
+  .offsetImage {
+  object-position: center top;
+}
