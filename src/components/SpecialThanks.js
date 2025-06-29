@@ -93,13 +93,13 @@ const SpecialThanks = () => {
               custom={2 + index}
             >
               <div className={styles.imageContainer}>
-                <Image 
-                  src={supporter.image}
-                  alt={supporter.name}
-                  width={200}
-                  height={200}
-                  className={styles.supporterImage}
-                />
+            <Image 
+              src={supporter.image}
+              alt={supporter.name}
+              width={200}
+              height={200}
+              className={`${styles.supporterImage} ${supporter.name === "Balal & Saba" ? styles.offsetImage : ""}`}
+            />
               </div>
               <h3 className={styles.supporterName}>{supporter.name}</h3>
             </motion.div>
