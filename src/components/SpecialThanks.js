@@ -25,6 +25,10 @@ const SpecialThanks = () => {
     {
       name: "Dawood Hamayun",
       image: "/images/dawood.jpeg"
+    },
+        {
+      name: "Faraz Qadri",
+      image: "/images/faraz.jpeg"
     }
   ];
 
